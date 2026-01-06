@@ -2,16 +2,36 @@ const submite = document.getElementById('submite');
 const input = document.getElementById('pass')
 const toggle = document.querySelector('.toggle');
 
-submite.addEventListener('click', (e)=>{
+//for password validation
+input.addEventListener('keyup', ()=>{
+    isactive = true;
     const error = document.querySelector('error');
 
-    if(input.value.length < 8){
-        error.textContent = 'Password must be atleast 8 character';
+    if(!/[A-Z]/.test(input.value) || !/[@#$%^&*()|<>]/.test(input.value)){
+        error.textContent = 'Weak';
         error.style.color = 'red';
         input.style.border = '2px solid red'
-        e.preventDefault();
-    }else{error.textContent = null;}
+        error.style.display = 'flex'
+        submite.disabled = true;
+        submite.style.opacity = 0.5;
+    }else if(input.value.length < 8){
+        error.textContent = 'Midium';
+        error.style.color = 'orange';
+        error.style.display = 'flex'
+        input.style.border = '2px solid orange';
+        submite.disabled = true;
+        submite.style.opacity = 0.5;
+    }else{
+        error.textContent = 'Strong';
+        error.style.color = 'green';
+        error.style.display = 'flex'
+        input.style.border = '2px solid green';
+        submite.disabled = false;
+        submite.style.opacity = 1;
+    } 
 })
+
+//for password hide/show
 try{
     toggle.addEventListener('click',()=>{
     const span = document.querySelector('span');
@@ -31,11 +51,3 @@ try{
     } 
 })
 }catch(error){console.log(error)}
-
-submite.addEventListener('click', ()=>{
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('pass').value;
-    
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', pass);
-})
