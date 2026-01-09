@@ -15,32 +15,85 @@
         <section id="login">
             <div class="text">
                 <h1>Welcome Back</h1>
-                <p>It's great to see you again! please
+                <p>It's great to see you again! Please
                     log in to your account.
                 </p>
+                <img src="Icons8/illustration.jpg" alt="">
             </div>
             <form id="form-group" action="">
-                <label for="email">Email</label>
+                <label id="labelF" for="email">Email</label>
                 <input id="email" type="text" name="email" required>
-                <label for="password">Password</label>
+                <label id="labelS" for="password">Password</label>
                 <input id="pass" type="password" name="password">
-                <error></error>
                 <div class="toggle">
-                    <img id="hide" src="hide.png" alt="">
-                    <img id="show" src="show.png" alt="">
+                    <img id="hide" src="/Icons8/hide.png" alt="">
+                    <img id="show" src="/Icons8/show.png" alt="">
                     <span>Show Password</span>
                 </div>
-                <button id="submite" type="submit" disabled>Log in</button>
+                <button id="submite" type="submit">Log in</button>
                 <a href="#">Forget Password!</a>
             </form>
             <div class="create">
                 <h6>Don't have an account yet?</h6>
-                <a href="#">Create account</a>
+                <a id="tosignup" href="#signup">Create account</a>
             </div>
         </section>
-        <section id="signup"></section>
-        <footer>Privacy Police | Terms of Services | Help Center</footer>
+        <section id="signup">
+            <div class="text">
+                <h1>Welcome aboard</h1>
+                <p>Join us and start building your experience today</p>
+                <img src="Icons8/illustration.jpg" alt="">
+            </div>
+            <form action="" id="Form-submit">
+                <div id="for-name">
+                    <label id="labelf" for="First Name">First Name</label>
+                    <input id="FNM" type="text" name="First Name" required>
+                    <label id="labels" for="Last Name">Last Name</label>
+                    <input type="text" name="Last Name">
+                </div>
+                <div id="for-email-pass">
+                    <label for="Email">Email</label>
+                    <input id="loacalstorageemail" type="text" name="Email" required>
+                    <label for="password">Password</label>
+                    <input class="PP" type="password" name="Password" required>
+                    <label for="ConfirmPassword">Confirm Password</label>
+                    <input class="PC" type="password" name="ConfirmPassword" required>
+                    <div class="requirement">
+                        <span id="UCL">
+                            Upper Case Letter
+                            <img class="UCLC" src="/Icons8/correct.png" alt="">
+                            <img class="UCLW" src="/Icons8/wrong.png" alt="">
+                        </span>
+                        <span id="S">
+                            Symbols 
+                            <img class="SC" src="/Icons8/correct.png" alt="">
+                            <img class="SW" src="/Icons8/wrong.png" alt="">
+                        </span>
+                        <span id="BC">
+                            8 Character
+                            <img class="BCC" src="/Icons8/correct.png" alt="">
+                            <img class="BCW" src="/Icons8/wrong.png" alt="">
+                        </span>
+                    </div>
+                    <div id="toggle">
+                        <div class="pass">
+                            <img class="hide" src="Icons8/hide.png" alt="">
+                            <img class="show" src="Icons8/show.png" alt="">
+                        </div>
+                        <div class="confirm">
+                            <img id="Chide" src="Icons8/hide.png" alt="">
+                            <img id="Cshow" src="Icons8/show.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button id="signupbtn" type="submit" disabled>Sign Up</button>
+            </form>
+            <div class="create">
+                <h2>Already have an account?</h2>
+                <a id="tologin" href="#login">Log in</a>
+            </div>
+        </section>
+        <footer>Privacy Policy | Terms of Services | Help Center</footer>
     </main>
 </body>
-
 </html>

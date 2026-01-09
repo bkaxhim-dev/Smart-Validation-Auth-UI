@@ -15,18 +15,281 @@ body{
     align-items: center;
     justify-content: center;
 }
-@media (min-width: 200px),(max-width: 600px){
+@media (min-width: 1025px){
+    main{
+        width: 70vw;
+        height: 80vh;
+        overflow: hidden;
+        background: var(--primary-color);
+        border-radius: 10px;
+        box-shadow: 1px 1px 15px 5px rgb(0, 0, 0, 0.5);
+
+        #login{
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            .text{
+                margin: 5%;
+                width: 60%;
+                align-self: flex-start;
+
+                img{
+                    width: 75%;
+                    transform: translateX(15%);
+                }
+                h1{
+                    text-align: center;
+                    font-size: 3rem;
+                    font-family: var(--font-family);
+                }
+                p{
+                    text-align: justify;
+                    font-size: 1.9rem;
+                    font-family: var(--font-family);
+                }
+            }
+            form{
+                width: 40%;
+                height: 100%;
+                align-self: flex-end;
+                background: linear-gradient(180deg,rgba(125, 125, 125, 1) 0%, 
+                rgba(179, 179, 179, 1) 50%, rgba(255, 255, 255, 1) 100%);
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 0.7em;
+
+                input{
+                    width: 90%;
+                    height: 40px;
+                    border: none;
+                    text-indent: 15px;
+                    font-size: 1.2rem;
+                    border-radius: 10px;
+                    font-family: var(--font-family);
+                    outline: none;
+                    box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
+                }
+                #labelF{
+                    align-self: flex-start;
+                    margin-top: 35%;
+                    margin-left: 20px;
+                    font-size: 1.5rem;
+                    font-family: var(--font-family);
+                }
+                #labelS{
+                    align-self: flex-start;
+                    margin-top: 5%;
+                    margin-left: 20px;
+                    font-size: 1.5rem;
+                    font-family: var(--font-family);
+                }
+                .toggle{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 7%;
+                    margin-top: 3%;
+                    gap: 0.5em;
+                    align-self: flex-start;
+
+                    #hide{
+                        width: 25px;
+                    }
+                    #show{
+                        display: none;
+                        width: 25px;
+                    }
+                    span{
+                        font-size: 0.9rem;
+                        font-family: var(--font-family);
+                    }
+                }
+                #submite{
+                    width: 90%;
+                    height: 40px;
+                    margin-top: 5%;
+                    border: none;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    font-family: var(--font-family);
+                    background-color: var(--button-color);
+                    box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
+                }
+                a{
+                    align-self: flex-start;
+                    margin: 7% 0 0 5%;
+                }
+            }
+        }
+        .create{
+            display: flex;
+            position: absolute;
+            right: 2%;
+            bottom: 1%;
+            
+            h6{
+                font-size: clamp(0.7rem, 1vw, 1rem);
+                font-family: var(--font-family);
+            }
+            a{
+                font-size: clamp(0.8rem, 1vw, 1.1rem);
+                text-decoration: none;
+                font-family: var(--font-family);
+            }
+        }
+        footer{
+            display: flex;
+            font-size: clamp(1rem, 1vw, 2rem);
+            font-family: var(--font-family);
+            margin-top: -20px;
+            margin-left: 18%;
+            z-index: 10;
+            }
+    }
+}
+@media (min-width: 601px) and (max-width: 1024px){
+    body{
+        background: linear-gradient(180deg,rgba(125, 125, 125, 1) 0%, 
+                rgba(179, 179, 179, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    }
     main{
         width: 100vw;
         height: 70vh;
 
         #login{
             margin: 5%;
+            display: none;
+
+            .text{
+                font-family: var(--font-family);
+
+                img{
+                    display: none;
+                }
+                h1{
+                    text-align: center;
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 2.5rem;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    padding: 3% 0 10% 0;
+                }
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.4rem;
+
+                
+                input{
+                    position: relative;
+                    height: 80px;
+                    text-indent: 20px;
+                    font-size: 2rem;
+                    border-radius: 20px;
+                    font-family: var(--font-family);
+                    box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
+                }
+                label{
+                    font-size: 2.2rem;
+                    font-family: var(--font-family);
+                }
+                button{
+                    align-self: flex-end;
+                    width: 90vw;
+                    height: 80px;
+                    color: var(--primary-color);
+                    font-size: 2.5rem;
+                    border-radius: 20px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: var(--button-color);
+                    font-family: var(--font-family);
+                    box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
+                }
+                button:active{
+                    background-color: hsl(from var(--button-color)h s l /0.5);
+                }
+                #pimg, #eimg{
+                    display: none;
+                }
+                .toggle{
+                    position: absolute;
+                    right: 75px;
+                    margin-top: 75px;
+                    gap: 0.7em;
+                    img{
+                        
+                        width: 35px;
+                        height: 35px;
+                    }
+                    #show{
+                        display: none;
+                    }
+                    #hide{
+                        display: block;
+                    }
+                }
+                a{
+                    align-self: flex-end;
+                    font-size: 1.8rem;
+                    font-family: var(--font-family);
+                }
+                span{
+                    display: none;
+                }
+            }
+            .create{
+                display: flex;
+                justify-content: center;
+                font-family: var(--font-family);
+                margin-top: 70px;
+                gap: 0.3rem;
+
+                h6{
+                    font-size: clamp(1.4rem, 1.7rem, 2.3rem);
+                }
+                a{
+                    font-size: clamp(1.5rem, 2rem, 2.5rem);
+                }
+            }
+        }
+        footer{
+            display: flex;
+            font-size: clamp(1.5rem, 1.8rem, 2rem);
+            margin-top: 150px;
+            justify-content: center;
+            }
+    }
+}
+@media (min-width: 200px) and (max-width: 600px){
+    body{
+        background: linear-gradient(180deg,rgba(125, 125, 125, 1) 0%, 
+                rgba(179, 179, 179, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    }
+    main{
+        width: 100vw;
+        height: 70vh;
+
+        #login{
+            display: none;
+            margin: 5%;
 
             .text{
                 text-align: center;
                 font-family: var(--font-family);
 
+                img{
+                    display: none;
+                }
                 h1{
                     font-size: 2.5rem;
                 }
@@ -43,16 +306,14 @@ body{
                 justify-content: center;
                 gap: 0.7rem;
 
-                error{
-                    align-self: flex-end;
-                    font-size: 1.1rem;
-                }
+                
                 input{
                     height: 50px;
                     border-radius: 10px;
                     border: 1px solid var(--font-color);
                     text-indent: 10px;
                     font-size: 1.1rem;
+                    box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
                 }
                 label{
                     font-size: 1.4rem;
@@ -69,9 +330,13 @@ body{
                     border-radius: 10px;
                     border: none;
                     cursor: pointer;
+                    box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
                 }
                 button:active{
                     background-color: hsl(from var(--button-color)h s l /0.5);
+                }
+                #pimg, #eimg{
+                    display: none;
                 }
                 .toggle{
                     display: flex;
@@ -110,128 +375,222 @@ body{
             display: flex;
             font-size: clamp(0.8rem, 0.9rem, 1.5rem);
             font-family: var(--font-family);
-            margin-top: 100px;
-            justify-content: center;
-            }
-    }
-}
-@media (min-width: 601px),(max-width: 1024){
-    main{
-        width: 100vw;
-        height: 70vh;
-
-        #login{
-            margin: 5%;
-
-            .text{
-                font-family: var(--font-family);
-
-                h1{
-                    text-align: center;
-                    font-size: 4rem;
-                }
-                p{
-                    font-size: 2.5rem;
-                    text-align: center;
-                    letter-spacing: 1px;
-                    padding: 3% 0 10% 0;
-                }
-            }
-            form{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 1.4rem;
-
-                error{
-                    position: absolute;
-                    top: 0;
-                    width: 80vw;
-                    height: 5vh;
-                    font-size: 2.1rem;
-                    align-self: center;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: var(--primary-color);
-                    box-shadow: 1px 1px 20px 5px rgb(0, 0, 0, 0.3);
-                    animation: slide 1s linear forwards;
-                }
-                input{
-                    position: relative;
-                    height: 80px;
-                    text-indent: 20px;
-                    font-size: 2rem;
-                }
-                label{
-                    font-size: 2.2rem;
-                }
-                button{
-                    align-self: flex-end;
-                    width: 90vw;
-                    height: 80px;
-                    font-size: 2.5rem;
-                    opacity: 0.5;
-                }
-                button:active{
-                    background-color: hsl(from var(--button-color)h s l /0.5);
-                }
-                .toggle{
-                    position: absolute;
-                    right: 75px;
-                    margin-top: 75px;
-                    gap: 0.7em;
-                    img{
-                        
-                        width: 35px;
-                        height: 35px;
-                    }
-                    #show{
-                        display: none;
-                    }
-                    #hide{
-                        display: block;
-                    }
-                }
-                a{
-                    align-self: flex-end;
-                    font-size: 1.8rem;
-                }
-                span{
-                    display: none;
-                }
-            }
-            .create{
-                display: flex;
-                justify-content: center;
-                margin-top: 70px;
-                gap: 0.3rem;
-
-                h6{
-                    font-size: clamp(1.4rem, 1.7rem, 2.3rem);
-                }
-                a{
-                    font-size: clamp(1.5rem, 2rem, 2.5rem);
-                }
-            }
-        }
-        footer{
-            font-size: clamp(1.5rem, 1.8rem, 2rem);
             margin-top: 150px;
             justify-content: center;
             }
     }
 }
-@keyframes slide {
-    0%{
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 #pass:focus{
     outline: none;
+}
+@media (min-width: 200px) and (max-width: 600px){
+    body{
+        background: linear-gradient(180deg,rgba(125, 125, 125, 1) 0%, 
+                rgba(179, 179, 179, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    }
+    main{
+        width: 100vw;
+        height: 70vh;
+
+        #signup{
+            display: flex;
+            flex-direction: column;
+            margin: 5%;
+
+            .text{
+                margin-top: 10%;
+                align-self: center;
+                font-family: var(--font-family);
+                
+                h1{
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+                p{
+                    text-align: justify;
+                    font-size: 1.5rem;
+                }
+                img{
+                    display: none;
+                }
+            }
+            form{
+                width: 100%;
+                align-self: center;
+                font-family: var(--font-family);
+                margin-top: 20%;
+
+                #for-name{
+                    position: relative;
+                    display: flex;
+                    gap: 0.5em;
+                    margin-bottom: 5%;
+
+                    #labelf{
+                        position: absolute;
+                        font-size: 1.4rem;
+                        top: -90%;
+                        left: 2%;
+                    }
+                    #labels{
+                        position: absolute;
+                        font-size: 1.4rem;
+                        top: -90%;
+                        left: 52%;
+                    }
+                    input{
+                        width: 100%;
+                        height: 40px;
+                        border: none;
+                        border-radius: 10px;
+                        text-indent: 15px;
+                        outline: none;
+                        font-size: 1.1rem;
+                        box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
+                    }
+                }
+                #for-email-pass{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7em;
+
+                    label{
+                        align-self: flex-start;
+                        font-size: 1.4rem;
+                    }
+                    input{
+                        width: 100%;
+                        height: 40px;
+                        border: none;
+                        border-radius: 10px;
+                        text-indent: 15px;
+                        font-size: 1.2rem;
+                        outline: none;
+                        box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
+                    }
+                    .requirement{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5em;
+
+                        #UCL{
+                            display: flex;
+                            align-items: center;
+                            align-self: flex-start;
+                            justify-content: center;
+                            gap: 10px;
+
+                            img{
+                                width: 20px;
+                            }
+                            .UCLC{
+                                display: none;
+                            }
+                            .UCLW{
+                                display: block;
+                            }
+                        }
+                        #S{
+                            display: flex;
+                            align-items: center;
+                            align-self: flex-start;
+                            justify-content: center;
+                            gap: 10px;
+
+                            img{
+                                width: 20px;
+                            }
+                            .SC{
+                                display: none;
+                            }
+                            .SW{
+                                display: block;
+                            }
+                        }
+                        #BC{
+                            display: flex;
+                            align-items: center;
+                            align-self: flex-start;
+                            justify-content: center;
+                            gap: 10px;
+
+                            img{
+                                width: 20px;
+                            }
+                            .BCC{
+                                display: none;
+                            }
+                            .BCW{
+                                display: block;
+                            }
+                        }
+                    }
+                    #toggle{
+                        align-self: flex-end;
+                        margin-right: 10%;
+
+                        img{
+                            width: 25px;
+                        }
+                        .pass{
+                            position: absolute;
+                            top: 38%;
+
+                            .hide{
+                                display: block;
+                            }
+                            .show{
+                                display: none;
+                            }
+                        }
+                        .confirm{
+                            position: absolute;
+                            top: 63%;
+
+                            #Chide{
+                                display: block;
+                            }
+                            #Cshow{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                button{
+                    width: 35vw;
+                    height: 40px;
+                    border: none;
+                    border-radius: 10px;
+                    float: right;
+                    color: white;
+                    background: var(--button-color);
+                    font-size: 1.5rem;
+                    opacity: 0.5;
+                    font-family: var(--font-family);
+                    box-shadow: 1px 1px 10px 5px rgb(156, 156, 156);
+                }
+            }
+            .create{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 25%;
+                font-family: var(--font-family);
+                font-size: clamp(0.7rem, 3vw, 0.9rem);
+                gap: 0.5em;
+
+                a{
+                    font-family: var(--font-family);
+                    font-size: clamp(0.9rem, 5vw, 1.5rem);
+                    text-decoration: none;
+                }
+            }
+        }
+        footer{
+            margin-top: 15%;
+            font-size: 1rem;
+            font-family: var(--font-family);
+        }
+    }
 }
